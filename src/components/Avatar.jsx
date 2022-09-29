@@ -1,8 +1,11 @@
-export function Avatar() {
+import styles from "./Avatar.module.css";
+
+// with desestructure it's possible passing default values. 
+export function Avatar({ hasBorder = true, src }) {
   return (
     <img
-      className={styles.avatar}
-      src="https://github.com/LucasGabrielSI.png"
+      className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+      src={src}
     />
   );
 }
